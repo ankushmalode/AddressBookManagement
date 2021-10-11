@@ -2,10 +2,8 @@ package com.bridgelabz;
 
 /**
  * Hello world!
- *
  */
-public class info
-{
+public class info {
     private String firstName;
     private String lastName;
     private String add;
@@ -83,7 +81,7 @@ public class info
         return this;
     }
 
-    public void setAllDetails(String firstName, String lastName, String add,String city,String state,String pineCode,String phoneNumber, String emailID) {
+    public void setAllDetails(String firstName, String lastName, String add, String city, String state, String pineCode, String phoneNumber, String emailID) {
         this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setAdd(add);

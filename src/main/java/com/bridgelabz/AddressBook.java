@@ -73,47 +73,47 @@ public class AddressBook {
 
     public static void editDetails(List<info> book) {
         System.out.println("Please enter number you want to edit: ");
-        Scanner scanner=new Scanner(System.in);
-        int choice=scanner.nextInt();
-        if (choice> book.size()){
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
+        if (choice > book.size()) {
             System.out.println("Invalid choice");
-        }else{
+        } else {
             System.out.println("Please enter field you want to edit: 1.firstName\n2. lastName\n3. add\n4.city\n5. state\n6. pineCode\n7. phoneNumber\n8. emailID");
-            int field= scanner.nextInt();
+            int field = scanner.nextInt();
             System.out.println("Enter Value: ");
-            String value= scanner.nextLine();
-            switch (field){
+            String value = scanner.nextLine();
+            switch (field) {
                 case 1:
-                    value= scanner.nextLine();
-                    book.get(choice-1).setFirstName(value);
+                    value = scanner.nextLine();
+                    book.get(choice - 1).setFirstName(value);
                     break;
                 case 2:
-                    value= scanner.nextLine();
-                    book.get(choice-1).setLastName(value);
+                    value = scanner.nextLine();
+                    book.get(choice - 1).setLastName(value);
                     break;
                 case 3:
-                    value= scanner.nextLine();
-                    book.get(choice-1).setAdd(value);
+                    value = scanner.nextLine();
+                    book.get(choice - 1).setAdd(value);
                     break;
                 case 4:
-                    value= scanner.nextLine();
-                    book.get(choice-1).setCity(value);
+                    value = scanner.nextLine();
+                    book.get(choice - 1).setCity(value);
                     break;
                 case 5:
-                    value= scanner.nextLine();
-                    book.get(choice-1).setState(value);
+                    value = scanner.nextLine();
+                    book.get(choice - 1).setState(value);
                     break;
                 case 6:
-                    value= scanner.nextLine();
-                    book.get(choice-1).setPineCode(value);
+                    value = scanner.nextLine();
+                    book.get(choice - 1).setPineCode(value);
                     break;
                 case 7:
-                    value= scanner.nextLine();
-                    book.get(choice-1).setPhoneNumber(value);
+                    value = scanner.nextLine();
+                    book.get(choice - 1).setPhoneNumber(value);
                     break;
                 default:
-                    value= scanner.nextLine();
-                    book.get(choice-1).setEmailID(value);
+                    value = scanner.nextLine();
+                    book.get(choice - 1).setEmailID(value);
                     break;
             }
         }
@@ -122,24 +122,24 @@ public class AddressBook {
     public static void displayAllDetails(List<info> book) {
         System.out.println("Sr.No\tFirstName\tLastName\tAddress\tCityState\tPinCode\tPhoneNumber\tEmailID");
         for (int i = 0; i < book.size(); i++) {
-            System.out.print(i+1);
-            System.out.print("\t"+book.get(i).getFirstName());
-            System.out.print("\t"+book.get(i).getLastName());
-            System.out.print("\t"+book.get(i).getAdd());
-            System.out.print("\t"+book.get(i).getCity());
-            System.out.print("\t"+book.get(i).getState());
-            System.out.print("\t"+book.get(i).getPineCode());
-            System.out.print("\t"+book.get(i).getPhoneNumber());
-            System.out.println("\t"+book.get(i).getEmailID());
+            System.out.print(i + 1);
+            System.out.print("\t" + book.get(i).getFirstName());
+            System.out.print("\t" + book.get(i).getLastName());
+            System.out.print("\t" + book.get(i).getAdd());
+            System.out.print("\t" + book.get(i).getCity());
+            System.out.print("\t" + book.get(i).getState());
+            System.out.print("\t" + book.get(i).getPineCode());
+            System.out.print("\t" + book.get(i).getPhoneNumber());
+            System.out.println("\t" + book.get(i).getEmailID());
         }
     }
 
-    public static List<info> deletContact(List<info> book){
+    public static List<info> deletContact(List<info> book) {
         displayAllDetails(book);
         System.out.println("Enter the number you want to remove: ");
-        Scanner scanner=new Scanner(System.in);
-        int delete= scanner.nextInt();
-        book.remove(delete-1);
+        Scanner scanner = new Scanner(System.in);
+        int delete = scanner.nextInt();
+        book.remove(delete - 1);
         return book;
     }
 }
