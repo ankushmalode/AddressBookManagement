@@ -3,24 +3,21 @@ package com.bridgelabz;
 import java.util.*;
 
 public class AddressBook {
-//    userInfo user = new userInfo();
 
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book Program");
         Scanner scanner = new Scanner(System.in);
 
-//        AddressBook addressBook = new AddressBook();
-//        addressBook.askUser();
 
         List<info> book = new ArrayList<info>();
-        String firstName = "";
-        String lastName = "";
-        String add = "";
-        String city = "";
-        String state = "";
-        String pinCode = "";
-        String phoneNumber = "";
-        String emailID = "";
+//        String firstName = "";
+//        String lastName = "";
+//        String add = "";
+//        String city = "";
+//        String state = "";
+//        String pinCode = "";
+//        String phoneNumber = "";
+//        String emailID = "";
 
 
         int exitCode = 0;
@@ -34,14 +31,13 @@ public class AddressBook {
                     book.add(getAllDetails());
                     break;
                 case 2:
-//                    System.out.println("Enter first and last name of the person to edit the contact: ");
                     editDetails(book);
                     break;
                 case 3:
                     displayAllDetails(book);
                     break;
                 case 4:
-                    book=deletContact(book);
+                    deletContact(book);
                     break;
                 default:
                     exitCode = 5;
@@ -76,7 +72,6 @@ public class AddressBook {
     }
 
     public static void editDetails(List<info> book) {
-//        displayAllDetails(book);
         System.out.println("Please enter number you want to edit: ");
         Scanner scanner=new Scanner(System.in);
         int choice=scanner.nextInt();
